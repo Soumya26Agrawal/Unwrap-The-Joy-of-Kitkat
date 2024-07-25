@@ -1,6 +1,8 @@
 
 let menu=document.querySelector("#mainNav i")
 let close=document.querySelector("#sideNav i")
+let a=document.querySelectorAll("#sideNav a")
+
 let tl=gsap.timeline()
 
 tl.to('#sideNav',{
@@ -28,6 +30,12 @@ close.addEventListener('click', function()
     tl.reverse();
 })
 
+a= Array.from(a)
+a.forEach((link)=>{
+link.addEventListener('click',function(){
+    tl.reverse();
+})
+})
 
 
 
