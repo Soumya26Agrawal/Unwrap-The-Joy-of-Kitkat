@@ -279,7 +279,29 @@ gsap.to(".containers",{
 
 })
 
+const collection=[
+    "4Finger",
+    "2finger",
+    "Pack",
+    
+]
 
+let collectionBtn= document.querySelectorAll(".Collection-btn")
+let img= document.querySelectorAll(".collection img")
+console.log(img)
+
+ collectionBtn= Array.from(collectionBtn);
+ img= Array.from(img);
+
+ collectionBtn.forEach((btn,idx)=>{
+    btn.addEventListener("click",function(){
+        let item=collection[idx];
+        img.forEach((img,idx)=>{
+            img.setAttribute("src",`images/${item}${idx+1}.jpeg`)
+        })
+
+    })
+ })
 
 
 
