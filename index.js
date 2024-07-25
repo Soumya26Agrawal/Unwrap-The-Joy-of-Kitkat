@@ -281,7 +281,7 @@ gsap.to(".containers",{
 
 const collection=[
     "4Finger",
-    "2finger",
+    "2Finger",
     "Pack",
     
 ]
